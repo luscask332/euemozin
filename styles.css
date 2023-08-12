@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #FFD700;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lista-memorias h2, .adicionar-memoria h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.memoria {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.memoria:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.memoria img {
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info p {
+  color: #666;
+}
+
+.adicionar-memoria label, .adicionar-memoria textarea, .adicionar-memoria input[type="text"], .adicionar-memoria input[type="file"], .adicionar-memoria button {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.adicionar-memoria textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.adicionar-memoria button {
+  background-color: #FFD700;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adicionar-memoria button:hover {
+  background-color: #FFC400;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer p {
+  font-size: 14px;
+}

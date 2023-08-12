@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Memórias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Memórias minha e do meu mozin</h1>
+    </header>
+    
+    <main>
+        <section class="lista-memorias">
+            <h2>Rever nossos melhores momentos</h2>
+            <ul>
+                {% for memory in memories %}
+                <li>
+                    <div class="memoria">
+                        <img src="{{ url_for('static', filename=memory['photo']) }}" alt="Foto da Memória">
+                        <div class="info">
+                            <h3>{{ memory['title'] }}</h3>
+                            <p>{{ memory['content'] }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        
+        <section class="adicionar-memoria">
+            <h2>Criar uma Nova Memória</h2>
+            <form action="{{ url_for('add_memory') }}" method="post" enctype="multipart/form-data">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Conteúdo:</label>
+                <textarea id="content" name="content" rows="6" required></textarea>
+                <label for="photo">Foto:</label>
+                <input type="file" id="photo" name="photo" accept=".png, .jpg, .jpeg, .gif" required>
+                <button type="submit">Adicionar Memória</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Memórias Felizes</p>
+    </footer>
+</body>
+</html>
