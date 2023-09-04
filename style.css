@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f9e6e6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.input-description {
+    border: 2px solid #ff6b6b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.upload-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#album {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.photo-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #777;
+    font-weight: bold;
+}
+
+.delete-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.delete-button:hover {
+    background-color: #ff4444;
+}
