@@ -1,14 +1,12 @@
 <?php
-$imagens = [];
-
 $dir = "uploads/";
 $files = scandir($dir);
 
 foreach ($files as $file) {
     if ($file !== "." && $file !== "..") {
-        $imagens[] = ["filename" => $file, "descricao" => ""];
+        echo '<div class="photo-item">';
+        echo '<img src="uploads/' . $file . '" alt="' . $file . '">';
+        echo '</div>';
     }
 }
-
-echo json_encode($imagens);
 ?>
